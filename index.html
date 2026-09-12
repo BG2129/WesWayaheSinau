@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catatan Biologi: Metabolisme & Genetika — Kelas XII</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF7EF;
+    --ink:#20281F;
+    --ink-soft:#4B5449;
+    --meta:#D9762B;      /* oranye energi - metabolisme */
+    --meta-tint:#FBEADC;
+    --gen:#4A5FA5;        /* biru-indigo DNA - genetika */
+    --gen-tint:#E7EAF5;
+    --chloro:#3F7D58;     /* hijau klorofil */
+    --chloro-tint:#E4EFE7;
+    --warn:#B84A4A;       /* merah mutasi/peringatan */
+    --warn-tint:#F5E4E2;
+    --line:#DDD5C2;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3', sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+  h1,h2,h3{font-family:'Fraunces', serif;font-weight:600;color:var(--ink);margin:0;}
+  .hero{margin-bottom:44px;}
+  .hero .kicker{
+    font-family:'Source Sans 3',sans-serif;
+    font-size:14px;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .hero h1{font-size:38px;line-height:1.15;font-weight:700;}
+  .hero p.sub{color:var(--ink-soft);font-size:17px;margin-top:12px;max-width:600px;}
+  .badge-row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;}
+  .badge{
+    display:inline-block;padding:5px 13px;border-radius:20px;
+    font-size:13px;font-weight:600;
+  }
+  .badge.meta{background:var(--meta-tint);color:var(--meta);}
+  .badge.gen{background:var(--gen-tint);color:var(--gen);}
+
+  nav.toc{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:16px 0;
+    margin:36px 0 48px;
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+    font-size:14px;
+  }
+  nav.toc a{color:var(--ink-soft);text-decoration:none;font-weight:600;}
+  nav.toc a:hover{color:var(--ink);}
+
+  .part-title{
+    display:flex;align-items:baseline;gap:12px;
+    margin:64px 0 8px;
+  }
+  .part-title h2{font-size:29px;}
+  .part-title .part-icon{font-size:26px;}
+  .part-intro{color:var(--ink-soft);margin-bottom:32px;font-size:15.5px;max-width:600px;}
+
+  .section{margin-bottom:34px;padding-left:18px;border-left:3px solid var(--line);}
+  .section.meta-line{border-left-color:var(--meta);}
+  .section.gen-line{border-left-color:var(--gen);}
+  .section.chloro-line{border-left-color:var(--chloro);}
+  .section h3{font-size:20px;margin-bottom:10px;}
+
+  ul{margin:8px 0;padding-left:20px;}
+  li{margin-bottom:6px;}
+  ul ul{margin-top:6px;}
+
+  .term{font-weight:700;}
+  .meta-c{color:var(--meta);}
+  .gen-c{color:var(--gen);}
+  .chloro-c{color:var(--chloro);}
+  .warn-c{color:var(--warn);}
+
+  .callout{
+    background:var(--meta-tint);
+    border-radius:6px;
+    padding:14px 18px;
+    margin:14px 0;
+    font-size:14.5px;
+  }
+  .callout.gen{background:var(--gen-tint);}
+  .callout.chloro{background:var(--chloro-tint);}
+  .callout.warn{background:var(--warn-tint);}
+  .callout .label{font-weight:700;display:block;margin-bottom:4px;font-size:13px;letter-spacing:.2px;}
+  .callout.meta .label{color:var(--meta);}
+  .callout.gen .label{color:var(--gen);}
+  .callout.chloro .label{color:var(--chloro);}
+  .callout.warn .label{color:var(--warn);}
+
+  table{
+    width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;
+  }
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);}
+  th{font-family:'Fraunces',serif;font-weight:600;color:var(--ink-soft);}
+
+  .divider{
+    text-align:center;margin:56px 0;color:var(--ink-soft);
+    font-family:'Fraunces',serif;font-style:italic;font-size:15px;
+  }
+  .divider::before,.divider::after{content:"";display:inline-block;width:60px;height:1px;background:var(--line);vertical-align:middle;margin:0 14px;}
+
+  .quiz{
+    margin-top:60px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:10px;
+    padding:32px 28px;
+  }
+  .quiz h2{color:var(--paper);font-size:24px;margin-bottom:6px;}
+  .quiz p.sub{color:#C9CCC3;font-size:14.5px;margin-bottom:20px;}
+  .quiz ol{padding-left:20px;margin:0;}
+  .quiz li{margin-bottom:16px;font-size:15.5px;}
+  .quiz li b{color:#F0D9B8;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">Catatan Biologi · Kelas XII SMA</div>
+    <h1>Metabolisme & Genetika</h1>
+    <p class="sub">Rangkuman ini merangkum dua bab besar biologi: bagaimana sel mengolah energi (metabolisme), dan bagaimana sifat diwariskan lewat materi genetik (genetika). Istilah kunci ditebalkan supaya gampang dihafal.</p>
+    <div class="badge-row">
+      <span class="badge meta">⚡ Metabolisme</span>
+      <span class="badge gen">🧬 Genetika</span>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <a href="#metabolisme">① Metabolisme</a>
+    <a href="#genetika">② Genetika</a>
+    <a href="#quiz">③ Latihan Soal</a>
+  </nav>
+
+  <!-- ================= BAGIAN 1: METABOLISME ================= -->
+  <div id="metabolisme">
+  <div class="part-title">
+    <span class="part-icon">⚡</span>
+    <h2>Bagian 1 — Metabolisme</h2>
+  </div>
+  <p class="part-intro">Metabolisme adalah seluruh reaksi kimia di dalam sel makhluk hidup yang melibatkan energi. Ada dua arah reaksi: membongkar (menghasilkan energi) dan menyusun (memakai energi).</p>
+
+  <div class="section meta-line">
+    <h3>Konsep Dasar</h3>
+    <ul>
+      <li><span class="term meta-c">Katabolisme</span>: reaksi <span class="term">pembongkaran</span> molekul kompleks menjadi sederhana, sifatnya <span class="term">eksergonik</span> (melepas energi). Contoh: respirasi sel.</li>
+      <li><span class="term meta-c">Anabolisme</span>: reaksi <span class="term">penyusunan</span> molekul sederhana menjadi kompleks, sifatnya <span class="term">endergonik</span> (butuh energi). Contoh: fotosintesis.</li>
+      <li><span class="term">Enzim</span> berperan sebagai <span class="term">biokatalisator</span> — mempercepat reaksi tanpa ikut bereaksi. Sifatnya spesifik (lock and key / induced fit), dipengaruhi suhu, pH, konsentrasi substrat, dan inhibitor.</li>
+    </ul>
+    <div class="callout meta">
+      <span class="label">INGAT</span>
+      Enzim bekerja optimal pada suhu dan pH tertentu — di luar rentang itu enzim bisa <span class="term">terdenaturasi</span> (rusak struktur, kerja terhenti).
+    </div>
+  </div>
+
+  <div class="section meta-line">
+    <h3>Katabolisme Karbohidrat: Respirasi Sel</h3>
+    <p>Respirasi aerob (butuh O₂) berlangsung dalam 4 tahap berurutan di dalam sel:</p>
+    <ul>
+      <li><span class="term">1. Glikolisis</span> — di <span class="term">sitoplasma</span>. Glukosa (6C) dipecah jadi 2 asam piruvat (3C). Hasil: <span class="term">2 ATP</span>, 2 NADH.</li>
+      <li><span class="term">2. Dekarboksilasi Oksidatif</span> — di matriks mitokondria. Piruvat diubah jadi <span class="term">Asetil KoA</span> + CO₂. Hasil: 2 NADH (untuk 2 piruvat).</li>
+      <li><span class="term">3. Siklus Krebs</span> — di matriks mitokondria. Asetil KoA dioksidasi penuh. Hasil (untuk 2 putaran): <span class="term">2 ATP</span>, 6 NADH, 2 FADH₂, CO₂.</li>
+      <li><span class="term">4. Transpor Elektron</span> — di membran dalam mitokondria (krista). NADH & FADH₂ dioksidasi, elektron mengalir dan menghasilkan energi besar. Hasil: sekitar <span class="term">32–34 ATP</span>. O₂ berperan sebagai akseptor elektron terakhir, membentuk H₂O.</li>
+    </ul>
+    <div class="callout meta">
+      <span class="label">TOTAL ATP</span>
+      1 molekul glukosa → sekitar <span class="term">36–38 ATP</span> lewat respirasi aerob lengkap.
+    </div>
+    <p><span class="term">Respirasi anaerob (fermentasi)</span> terjadi tanpa O₂, hanya sampai glikolisis, hasil ATP jauh lebih sedikit (2 ATP):</p>
+    <ul>
+      <li><span class="term">Fermentasi alkohol</span>: piruvat → etanol + CO₂ (contoh: ragi pada pembuatan tape/roti).</li>
+      <li><span class="term">Fermentasi asam laktat</span>: piruvat → asam laktat (contoh: otot manusia saat olahraga berat, kekurangan O₂ → pegal).</li>
+    </ul>
+  </div>
+
+  <div class="section chloro-line">
+    <h3>Anabolisme: Fotosintesis</h3>
+    <p>Fotosintesis mengubah energi cahaya menjadi energi kimia (glukosa), terjadi di <span class="chloro-c term">kloroplas</span>, dua tahap utama:</p>
+    <ul>
+      <li><span class="term chloro-c">Reaksi Terang</span> — di membran tilakoid. Membutuhkan cahaya & air. Hasil: <span class="term">ATP, NADPH, O₂</span> (dari fotolisis air).</li>
+      <li><span class="term chloro-c">Reaksi Gelap / Siklus Calvin</span> — di stroma. Tidak butuh cahaya langsung, tapi memakai ATP & NADPH dari reaksi terang untuk mengikat CO₂ (fiksasi karbon) menjadi glukosa.</li>
+    </ul>
+    <div class="callout chloro">
+      <span class="label">CONTOH PENERAPAN</span>
+      Tanaman di tempat teduh cenderung tumbuh kurus dan pucat (etiolasi lambat) karena reaksi terang tidak optimal — cahaya sebagai faktor pembatas laju fotosintesis, selain CO₂ dan suhu.
+    </div>
+    <p style="font-size:14.5px;color:var(--ink-soft);"><span class="term">Kemosintesis</span> mirip fotosintesis, tapi sumber energinya dari reaksi kimia (bukan cahaya) — dilakukan bakteri kemoautotrof, misalnya bakteri nitrifikasi.</p>
+  </div>
+  </div>
+
+  <div class="divider">selanjutnya</div>
+
+  <!-- ================= BAGIAN 2: GENETIKA ================= -->
+  <div id="genetika">
+  <div class="part-title">
+    <span class="part-icon">🧬</span>
+    <h2>Bagian 2 — Genetika</h2>
+  </div>
+  <p class="part-intro">Genetika mempelajari bagaimana sifat makhluk hidup disimpan dalam materi genetik dan diwariskan ke keturunannya.</p>
+
+  <div class="section gen-line">
+    <h3>Materi Genetik: DNA, RNA, Gen, Kromosom</h3>
+    <ul>
+      <li><span class="term gen-c">DNA</span> (asam deoksiribonukleat): rantai <span class="term">double helix</span>, penyusunnya gula deoksiribosa, fosfat, dan basa nitrogen (<span class="term">A-T, G-C</span>, berpasangan dengan ikatan hidrogen).</li>
+      <li><span class="term gen-c">RNA</span>: rantai tunggal, gula ribosa, basa <span class="term">Urasil</span> menggantikan Timin. Jenisnya: mRNA (pembawa pesan), tRNA (pembawa asam amino), rRNA (penyusun ribosom).</li>
+      <li><span class="term">Gen</span>: segmen DNA yang mengkode satu sifat/protein tertentu. Terletak pada lokus di kromosom.</li>
+      <li><span class="term">Kromosom</span>: DNA yang dipadatkan bersama protein histon. Manusia punya 46 kromosom (23 pasang): 22 pasang <span class="term">autosom</span> + 1 pasang <span class="term">gonosom</span> (XX/XY).</li>
+    </ul>
+  </div>
+
+  <div class="section gen-line">
+    <h3>Sintesis Protein</h3>
+    <ul>
+      <li><span class="term gen-c">Transkripsi</span>: DNA dicetak menjadi mRNA di dalam inti sel, oleh enzim RNA polimerase.</li>
+      <li><span class="term gen-c">Translasi</span>: mRNA diterjemahkan menjadi rangkaian asam amino (protein) di ribosom, dibantu tRNA yang membawa asam amino sesuai kodon.</li>
+      <li><span class="term">Kodon</span>: 3 basa nitrogen berurutan pada mRNA yang mengkode 1 asam amino. Contoh: AUG = kodon start (metionin), UAA/UAG/UGA = kodon stop.</li>
+    </ul>
+    <div class="callout gen">
+      <span class="label">ALUR SINGKAT</span>
+      DNA → (transkripsi) → mRNA → (translasi) → protein — dikenal sebagai <span class="term">Dogma Sentral Biologi Molekuler</span>.
+    </div>
+  </div>
+
+  <div class="section gen-line">
+    <h3>Pembelahan Sel</h3>
+    <ul>
+      <li><span class="term">Mitosis</span>: menghasilkan 2 sel anak identik, jumlah kromosom tetap (2n → 2n). Untuk pertumbuhan & regenerasi sel tubuh.</li>
+      <li><span class="term">Meiosis</span>: menghasilkan 4 sel anak dengan kromosom separuh induk (2n → n). Untuk pembentukan sel kelamin (gamet), terjadi <span class="term">pindah silang</span> (crossing over) yang menambah variasi genetik.</li>
+    </ul>
+  </div>
+
+  <div class="section gen-line">
+    <h3>Hukum Mendel & Pola Pewarisan</h3>
+    <ul>
+      <li><span class="term">Hukum Mendel I</span> (segregasi bebas): sepasang alel memisah saat pembentukan gamet — dasar persilangan monohibrid.</li>
+      <li><span class="term">Hukum Mendel II</span> (berpasangan bebas): alel dari gen berbeda berpisah secara bebas — dasar persilangan dihibrid, menghasilkan rasio fenotipe <span class="term">9:3:3:1</span>.</li>
+    </ul>
+    <table>
+      <tr><th>Pola Pewarisan</th><th>Ciri Singkat</th></tr>
+      <tr><td><span class="term">Dominan–resesif</span></td><td>Alel dominan menutupi alel resesif sepenuhnya (rasio 3:1)</td></tr>
+      <tr><td><span class="term">Intermediat</span></td><td>Sifat gabungan/blending, tak ada yang dominan penuh (contoh: Mirabilis jalapa merah × putih → merah muda)</td></tr>
+      <tr><td><span class="term">Kodominan</span></td><td>Kedua alel muncul bersamaan, tidak menutupi (contoh: golongan darah AB)</td></tr>
+      <tr><td><span class="term">Alel ganda</span></td><td>Satu gen punya lebih dari 2 alel (contoh: golongan darah A, B, AB, O)</td></tr>
+      <tr><td><span class="term">Gen letal</span></td><td>Kombinasi genotipe tertentu menyebabkan kematian individu</td></tr>
+      <tr><td><span class="term">Pautan (linkage)</span></td><td>Gen-gen dalam satu kromosom cenderung diwariskan bersama</td></tr>
+      <tr><td><span class="term">Gen terpaut kelamin</span></td><td>Gen berada di kromosom X/Y (contoh: buta warna, hemofilia)</td></tr>
+    </table>
+  </div>
+
+  <div class="section" style="border-left-color:var(--warn);">
+    <h3>Mutasi</h3>
+    <ul>
+      <li><span class="term warn-c">Mutasi gen</span>: perubahan pada urutan basa nitrogen DNA (contoh: substitusi, insersi, delesi basa).</li>
+      <li><span class="term warn-c">Mutasi kromosom</span>: perubahan struktur atau jumlah kromosom (contoh: sindrom Down akibat trisomi kromosom 21).</li>
+      <li>Penyebab (mutagen): radiasi, bahan kimia tertentu, atau virus.</li>
+    </ul>
+    <div class="callout warn">
+      <span class="label">STUDI KASUS</span>
+      Sindrom Down terjadi karena <span class="term">nondisjunction</span> (gagal berpisah) kromosom 21 saat meiosis, sehingga individu memiliki 3 salinan kromosom 21 (trisomi 21) — totalnya 47 kromosom.
+    </div>
+  </div>
+  </div>
+
+  <div id="quiz" class="quiz">
+    <h2>Latihan Pemahaman</h2>
+    <p class="sub">Coba jawab tanpa membuka catatan di atas dulu 👇</p>
+    <ol>
+      <li>Jelaskan perbedaan mendasar antara <b>katabolisme</b> dan <b>anabolisme</b>, lalu berikan satu contoh proses untuk masing-masing.</li>
+      <li>Urutkan 4 tahap respirasi aerob beserta lokasinya di dalam sel, dan sebutkan tahap mana yang menghasilkan ATP paling banyak.</li>
+      <li>Seorang anak lahir dengan sindrom Down. Jelaskan proses genetik apa yang menyebabkan kondisi ini terjadi.</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>
